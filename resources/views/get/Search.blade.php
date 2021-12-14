@@ -1,4 +1,4 @@
-<!-- <div class="row">
+<div class="row">
         <input type="search" class=" form-control" id="buscador">
         @foreach ($buscadores as $buscador )
         <div class="col-3"><br>
@@ -8,4 +8,4 @@
             <p>Tipo: {{$buscador->type}}</p>
         </div>
         @endforeach
-    </div> -->
+    </div>

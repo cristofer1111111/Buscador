@@ -9,9 +9,9 @@ class GetController extends Controller
     function getSearchid(Request $request){
         $busqueda = $request->get('buscador');
        if (strlen($busqueda) >= 3) {
-               $busqueda  = Search::where('name',$busqueda)
-                 ->orwhere('description',$busqueda)
-                 ->orwhere('type', $busqueda ) ->get();
+               $busqueda  = Search::where('name','LIKE','%',$busqueda,'%')
+                 ->orwhere('description','LIKE','%',$busqueda,'%')
+                 ->orwhere('type','LIKE','%', $busqueda,'%' ) ->get();
 
                 } elseif (strlen($busqueda) == 0) {
                      $busqueda  = 0;

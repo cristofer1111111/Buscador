@@ -6,7 +6,11 @@ $('#buscador').change(function(){
         type:'get',
         url: APP_URL = 'get/search',
         data:{
-            buscador :search
+            search :buscador,
+        },
+        success(response){
+            $('#buscador').html(response);
+            return response;
         }
     });
 });

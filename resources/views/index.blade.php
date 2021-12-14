@@ -8,7 +8,7 @@
         </div>
     </div><br><br>
     <div class="row">
-        <input type="search" class=" form-control" id="buscador">
+        <input type="search" class="buscador form-control" id="buscador">
         @foreach ($buscadores as $buscador )
         <div class="col-3"><br>
             <img src="{{url('upload/'.$buscador->images->image)}}" width="200" height="150">
